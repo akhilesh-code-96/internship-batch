@@ -1,4 +1,4 @@
-package module4;
+package module4.array;
 
 public class MultiDimensionalArray {
 

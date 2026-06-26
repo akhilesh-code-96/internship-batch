@@ -1,4 +1,4 @@
-package module4.searchingAlgorithms;
+package module4.array.searchingAlgorithms;
 
 public class LinearSearch {
 

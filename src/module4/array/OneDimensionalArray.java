@@ -1,4 +1,4 @@
-package module4;
+package module4.array;
 
 import java.util.Scanner;
 
@@ -58,8 +58,8 @@ public class OneDimensionalArray {
 //        System.out.println("Second largest number -> " + result);
 
         // removing duplicates
-        int length = removeDuplicates(arr);
-        for (int i = 0; i <= length; i++) {
+        int length = removeNonAdjacentDuplicates(arr);
+        for (int i = 0; i < length; i++) {
             System.out.print(arr[i] + " ");
         }
 
@@ -98,6 +98,22 @@ public class OneDimensionalArray {
         }
 
         return k;
+    }
+
+    // Remove duplicates when the elements are not adjacent and the range is known
+    private static int removeNonAdjacentDuplicates(int[] arr) {
+        boolean[] seen = new boolean[arr.length];
+        int size = 0;
+
+
+        for (int i = 0; i < arr.length; i++) {
+            if (!seen[arr[i]]) {
+                seen[arr[i]] = true;
+                arr[size++] = arr[i];
+            }
+        }
+
+        return size;
     }
 
 }
